@@ -24,9 +24,9 @@ If you need to install Python, head over to [http://www.python.org/download/ Pyt
 
 Follow these [https://svn.enthought.com/enthought/wiki/Install instructions] to install the Enthought Tool Suite.
 
-You don't have to install everything, the parts you'll need are: Traits, TraitsGUI, TraitsBackendWX, Enable, Chaco, EnthoughtBase
+You don't have to install everything, the parts you'll need are: `Traits, TraitsGUI, TraitsBackendWX, Enable, Chaco, EnthoughtBase`
 
-That means, that besides Python and Setuptools, you need these installed for the ETS: MinGW (assuming you're using Windows), Numpy, Swig and wxPython
+That means, that besides Python and Setuptools, you need these installed for the ETS: `MinGW` (assuming you're using Windows), `Numpy`, `Swig` and `wxPython`
  
 = Finally =
 
