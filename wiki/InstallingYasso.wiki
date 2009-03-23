@@ -1,0 +1,40 @@
+#summary How to run Yasso07 from source
+
+= Running Yasso07 =
+
+For a single executable distribution of Yasso07 (Win/Linux) head over to [http://www.environment.fi/syke/yasso Yasso's homepage].
+
+For those running Mac or interested in finding out how to run Yasso07 from the source, read on.
+
+= Installing the requirements =
+
+Yasso07 user interface is written in [http://www.python.org Python] using the [http://code.enthought.com/projects/index.php Enthought Tool Suite]. Installing it is a bit of a hassle, so use the [http://www.environment.fi/syke/yasso] single executable if you can.
+
+== Python ==
+
+Make sure you have Python 2.5 (or higher) installed. Open your console/terminal and type 
+
+`python`
+
+You'll get the interactive Python shell if you have Python installed. At the beginning you should see the version number. To quit the interactive shell, press Ctrl-d.
+
+If you need to install Python, head over to [http://www.python.org/download/ Python download] page for a suitable distribution.
+
+== Enthought Tool Suite ==
+
+Follow these [https://svn.enthought.com/enthought/wiki/Install instructions] to install the Enthought Tool Suite.
+
+You don't have to install everything, the parts you'll need are: Traits, TraitsGUI, TraitsBackendWX, Enable, Chaco, EnthoughtBase.
+
+That means, that besides Python and Setuptools, you need these installed for the ETS: MinGW (assuming you're using Windows), Numpy, Swig and wxPython.
+ 
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+= Finally =
+
+Grab the source distribution of Yasso07 (see the downloads tab), unzip it, open your console/terminal in the resulting yasso07-folder and issue the command
+
+`python yasso.py`
