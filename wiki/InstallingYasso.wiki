@@ -8,7 +8,7 @@ For those running Mac or interested in finding out how to run Yasso07 from the s
 
 = Installing the requirements =
 
-Yasso07 user interface is written in [http://www.python.org Python] using the [http://code.enthought.com/projects/index.php Enthought Tool Suite]. Installing it is a bit of a hassle, so use the [http://www.environment.fi/syke/yasso] single executable if you can.
+Yasso07 user interface is written in [http://www.python.org Python] using the [http://code.enthought.com/projects/index.php Enthought Tool Suite]. Installing it is a bit of a hassle, so use the [http://www.environment.fi/syke/yasso single executable] if you can.
 
 == Python ==
 
