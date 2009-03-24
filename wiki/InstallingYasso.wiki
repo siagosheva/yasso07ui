@@ -14,7 +14,7 @@ Yasso07 user interface is written in [http://www.python.org Python] using the [h
 
 Make sure you have Python 2.5 (or higher) installed. Open your console/terminal and type 
 
-`python`
+   `python`
 
 You'll get the interactive Python shell if you have Python installed. At the beginning you should see the version number. To quit the interactive shell, press Ctrl-d.
 
@@ -23,9 +23,9 @@ If you need to install Python, head over to [http://www.python.org/download/ Pyt
 == Enthought Tool Suite ==
 First, download [http://peak.telecommunity.com/dist/ez_setup.py this] python script and in the folder you downloaded is run:
 
-`sudo python ez_setup.py`
+   `sudo python ez_setup.py`
 or 
-`python ez_setup.py`
+   `python ez_setup.py`
 if you're on Windows.
 
 Then, follow these [https://svn.enthought.com/enthought/wiki/Install instructions] to install the Enthought Tool Suite.
@@ -33,12 +33,17 @@ Then, follow these [https://svn.enthought.com/enthought/wiki/Install instruction
 You don't have to install everything, the parts you'll need are: `Traits, TraitsGUI, TraitsBackendWX, Enable, Chaco, EnthoughtBase`
 
 That means, that besides Python and Setuptools, you need these installed for the ETS: `MinGW` (assuming you're using Windows), `Numpy`, `Swig` and `wxPython`
+
+A note for Mac users: After having installed wxPython, add the path to the newly installed wx-config to your path before trying to easy_install Enable. Something like this:
+
+   `export PATH=/usr/local/lib/wxPython-unicode-2.8.9.2/bin:$PATH`
+   `sudo easy_install Enable[nonets]`
  
 == dateutil ==
 
 Besides ETS, you need to install the dateutil package:
 
-`sudo easy_install python-dateutil`
+   `sudo easy_install python-dateutil`
 
 = Finally =
 
