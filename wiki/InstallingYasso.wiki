@@ -1,16 +1,16 @@
 #summary How to run Yasso07 from source
 
-= Running Yasso07 =
+== Running Yasso07 ==
 
 For a single executable distribution of Yasso07 (Win/Linux) head over to [http://www.environment.fi/syke/yasso Yasso's homepage].
 
 For those running Mac or interested in finding out how to run Yasso07 from the source, read on.
 
-= Installing the requirements =
+== Installing the requirements ==
 
 Yasso07 user interface is written in [http://www.python.org Python] using the [http://code.enthought.com/projects/index.php Enthought Tool Suite]. Installing it is a bit of a hassle, so use the [http://www.environment.fi/syke/yasso single executable] if you can.
 
-== Python ==
+=== Python ===
 
 Make sure you have Python 2.5 (or higher) installed. Open your console/terminal and type 
 
@@ -20,7 +20,8 @@ You'll get the interactive Python shell if you have Python installed. At the beg
 
 If you need to install Python, head over to [http://www.python.org/download/ Python download] page for a suitable distribution.
 
-== Enthought Tool Suite ==
+=== Enthought Tool Suite ===
+
 First, download [http://peak.telecommunity.com/dist/ez_setup.py this] python script and in the folder you downloaded is run:
 
    `sudo python ez_setup.py`
@@ -39,13 +40,13 @@ A note for Mac users: After having installed wxPython, add the path to the newly
    `export PATH=/usr/local/lib/wxPython-unicode-2.8.9.2/bin:$PATH`
    `sudo easy_install Enable[nonets]`
  
-== dateutil ==
+=== dateutil ===
 
 Besides ETS, you need to install the dateutil package:
 
    `sudo easy_install python-dateutil`
 
-= Finally =
+== Finally ==
 
 Grab the source distribution of Yasso07 (see the downloads tab), unzip it, open your console/terminal in the resulting yasso07-folder and issue the command
 
