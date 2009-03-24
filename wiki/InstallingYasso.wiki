@@ -21,13 +21,25 @@ You'll get the interactive Python shell if you have Python installed. At the beg
 If you need to install Python, head over to [http://www.python.org/download/ Python download] page for a suitable distribution.
 
 == Enthought Tool Suite ==
+First, download [http://peak.telecommunity.com/dist/ez_setup.py this] python script and in the folder you downloaded is run:
 
-Follow these [https://svn.enthought.com/enthought/wiki/Install instructions] to install the Enthought Tool Suite.
+`sudo python ez_setup.py`
+or 
+`python ez_setup.py`
+if you're on Windows.
+
+Then, follow these [https://svn.enthought.com/enthought/wiki/Install instructions] to install the Enthought Tool Suite.
 
 You don't have to install everything, the parts you'll need are: `Traits, TraitsGUI, TraitsBackendWX, Enable, Chaco, EnthoughtBase`
 
 That means, that besides Python and Setuptools, you need these installed for the ETS: `MinGW` (assuming you're using Windows), `Numpy`, `Swig` and `wxPython`
  
+== dateutil ==
+
+Besides ETS, you need to install the dateutil package:
+
+`sudo easy_install python-dateutil`
+
 = Finally =
 
 Grab the source distribution of Yasso07 (see the downloads tab), unzip it, open your console/terminal in the resulting yasso07-folder and issue the command
