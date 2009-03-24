@@ -50,4 +50,7 @@ Besides ETS, you need to install the dateutil package:
 
 Grab the source distribution of Yasso07 (see the downloads tab), unzip it, open your console/terminal in the resulting yasso07-folder and issue the command
 
-`python yasso.py`
+   `python yasso.py` 
+or if you are using [http://pypi.python.org/pypi/virtualenv virtualenv] with OS X, you should use:
+   `pythonw yasso.py`
+but in order to get that to work, see [http://github.com/gldnspud/virtualenv-pythonw-osx/tree/master this] link.
