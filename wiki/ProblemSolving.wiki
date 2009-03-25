@@ -1,4 +1,4 @@
-#summary How to deals with known problems of Yasso07 user interface.
+#summary How to deal with known problems of Yasso07 user interface.
 
 == Known problems with Yasso07 user interface ==
 
