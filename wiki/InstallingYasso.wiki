@@ -1,14 +1,22 @@
-#summary How to run Yasso07 from source
+#summary How to install Yasso07
 
 == Running Yasso07 ==
 
-For a single executable distribution of Yasso07 (Win/Linux) head over to [http://www.environment.fi/syke/yasso Yasso's homepage].
+For a distribution of Yasso07 that you can just run from a single executable, download either:
+
+[http://yasso07ui.googlecode.com/files/yasso07_1.0_exe_win.zip The Windows version]
+
+or
+
+[http://yasso07ui.googlecode.com/files/yasso07_1.0_exe_linux.tar.gz The Linux version]
+
+Note that the Linux version is tested only on Ubuntu 8.04 and 8.10.
 
 For those running Mac or interested in finding out how to run Yasso07 from the source, read on.
 
 == Installing the requirements ==
 
-Yasso07 user interface is written in [http://www.python.org Python] using the [http://code.enthought.com/projects/index.php Enthought Tool Suite]. Installing it is a bit of a hassle, so use the [http://www.environment.fi/syke/yasso single executable] if you can.
+Yasso07 user interface is written in [http://www.python.org Python] using the [http://code.enthought.com/projects/index.php Enthought Tool Suite]. Installing it is a bit of a hassle, so use the executable version if you can.
 
 === Python ===
 
@@ -51,6 +59,9 @@ Besides ETS, you need to install the dateutil package:
 Grab the source distribution of Yasso07 (see the downloads tab), unzip it, open your console/terminal in the resulting yasso07-folder and issue the command
 
    `python yasso.py` 
+
 or if you are using [http://pypi.python.org/pypi/virtualenv virtualenv] with OS X, you should use:
+
    `pythonw yasso.py`
+
 but in order to get that to work, see [http://github.com/gldnspud/virtualenv-pythonw-osx/tree/master this] link.
