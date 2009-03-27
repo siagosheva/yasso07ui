@@ -15,8 +15,16 @@ When you minimize or maximize the program window for Yasso07, nothing seems to h
 
 ----
 
+*Problem*: Opening a datafile fails if the path contains characters outside the ASCII range
+
+If the file or directory name for your datafile contains characters outside the A-Z and 0-9 range, opening the file fails.
+
+*Solution*: The only working one at the moment is the obvious one; use only A-Z/0-9 in the file and directory names.
+
+----
+
 *Problem*: Creating a new data file or using Save As.. on OS X
 
-There's a bug in New file and Save As dialog on OS X which prevents you to actually create a new file through the dialog.
+There was a bug in [http://code.enthought.com/projects/index.php Enthought Tool Suite], which Yasso07 uses, prior to version 3.2
 
-*Solution*: No real solution here, but the workaround is to create the new, empty file beforehand and then select it in the dialog.
+*Solution*: Upgrade your ETS intallation, see InstallingYasso
