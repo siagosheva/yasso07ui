@@ -1,0 +1,14 @@
+#summary Changes between the releases
+
+=== Change log for Yasso07 releases ===
+
+*1.0.1*
+
+Bug fix release, 28.3.2009
+
+- Fixed: steady state computation didn't reset the result between successive computations. This led to non constant initial state between model runs
+
+ 
+*1.0*
+
+Initial release, 27.3.2009
