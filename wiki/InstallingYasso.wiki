@@ -41,7 +41,7 @@ Then, follow these [https://svn.enthought.com/enthought/wiki/Install instruction
 
 You don't have to install everything, the parts you'll need are: `Traits, TraitsGUI, TraitsBackendWX, Enable, Chaco, EnthoughtBase`
 
-That means, that besides Python and Setuptools, you need these installed for the ETS: `MinGW` (assuming you're using Windows), `Numpy`, `Swig` and `wxPython`
+That means, that besides Python and Setuptools, you need these installed for the ETS: `MinGW` (assuming you're using Windows), `Numpy`, `Swig` and `wxPython` (it seems that `Sphinx` needs to be installed before ETS installation as well)
 
 A note for Mac users: After having installed wxPython, add the path to the newly installed wx-config to your path before trying to easy_install Enable. Something like this:
 
