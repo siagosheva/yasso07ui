@@ -2,6 +2,13 @@
 
 === Change log for Yasso07 releases ===
 
+*1.0.2*
+
+Bug fix release, 4.6.2009
+
+- Changed: in monthly climate series the rainfall was in yearly units, changed to monthly rainfall
+- Fixed: mode in "moment results"
+
 *1.0.1*
 
 Bug fix release, 28.3.2009
