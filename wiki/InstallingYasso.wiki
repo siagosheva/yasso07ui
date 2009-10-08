@@ -37,11 +37,35 @@ or
    `python ez_setup.py`
 if you're on Windows.
 
+The next step is to easy_install Sphinx (required by Chaco below):
+
+  `easy_install Sphinx`
+
 Then, follow these [https://svn.enthought.com/enthought/wiki/Install instructions] to install the Enthought Tool Suite.
 
-You don't have to install everything, the parts you'll need are: `Traits, TraitsGUI, TraitsBackendWX, Enable, Chaco, EnthoughtBase`
+You don't have to install everything, the parts you'll need are: `Traits, TraitsGUI, TraitsBackendWX, Enable, Chaco, EnthoughtBase`.
 
-That means, that besides Python and Setuptools, you need these installed for the ETS: `MinGW` (assuming you're using Windows), `Numpy`, `Swig` and `wxPython` (it seems that `Sphinx` needs to be installed before ETS installation as well)
+That means, that besides Python and Setuptools, you need these installed for the ETS: `MinGW` (assuming you're using Windows), `Numpy`, `Swig` and `wxPython`
+
+Note that you may run into incompatibility issues with the latest ETS package versions. In case you do, these versions should work:
+
+Traits 3.1.0
+
+TraitsGUI 3.0.4
+
+TraitsBackendWX 3.1.0
+
+Enable 3.0.2
+
+Chaco 3.0.1
+
+EnthoughtBase 3.0.2
+
+You can install a specific version of a package with easy_install by downloading the version egg, and then installing that egg. For instance, remove the latest Traits installation, and install from egg:
+ 
+ `easy_install -m Traits`
+
+ `easy_install Traits-3.1.0-py2.5-win32.egg`
 
 A note for Mac users: After having installed wxPython, add the path to the newly installed wx-config to your path before trying to easy_install Enable. Something like this:
 
