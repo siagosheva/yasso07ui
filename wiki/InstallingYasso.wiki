@@ -16,90 +16,7 @@ For those running Mac or interested in finding out how to run Yasso07 from the s
 
 == Installing the requirements ==
 
-Yasso07 user interface is written in [http://www.python.org Python] using the [http://code.enthought.com/projects/index.php Enthought Tool Suite]. Installing it is a bit of a hassle, so use the executable version if you can.
-
-=== Python ===
-
-Make sure you have Python 2.5 (or higher) installed. Open your console/terminal and type 
-
-   `python`
-
-You'll get the interactive Python shell if you have Python installed. At the beginning you should see the version number. To quit the interactive shell, press Ctrl-d.
-
-If you need to install Python, head over to [http://www.python.org/download/ Python download] page for a suitable distribution.
-
-_Note for Mac users_
-
-If you're using Snow Leopard (OS X 10.6), the Python interpreter that ships with the system runs in 64 bit mode. Yasso07ui uses the wxPython user interface library that must be run using 32 bit Python. To set your system Python run in 32 bit mode, open terminal and type:
-
-   `defaults write com.apple.versioner.python Prefer-32-Bit -bool yes`
-
-To get the additional Python package installations to succeed,  you'll have to set these environment variables in order to get the required 32 bit support:
-{{{
-  export MACOSX_DEPLOYMENT_TARGET=10.6
-  export CFLAGS="-arch i386 -arch x86_64"
-  export FFLAGS="-m32 -m64"
-  export LDFLAGS="-Wall -undefined dynamic_lookup -bundle -arch i386 -arch x86_64"
-}}}
-These setting will survive through your current Terminal session.
-
-=== Enthought Tool Suite ===
-
-First, download [http://peak.telecommunity.com/dist/ez_setup.py this] python script and in the folder you downloaded is run:
-
-   `sudo python ez_setup.py`
-or 
-   `python ez_setup.py`
-
-if you're on Windows.
-
-The next step is to install dependencies required by the [https://svn.enthought.com/enthought/wiki/Install Enthought Tool Suite]:
-
-  `easy_install Sphinx`
-
-
-  `easy_install Numpy`
-
-   Install MinGW (if you're on Windows)
-
-   Install an [http://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/oldtar/Pyrex-0.9.8.2.tar.gz 0.9.8.2] release of Pyrex (current as of writing, 0.9.9, will result in errors when installing Enable below) 
-
-   Install SWIG from [http://www.swig.org/download.html http://www.swig.org/download.html]
-
-   Install wxPython from [http://www.wxpython.org/download.php#binaries http://www.wxpython.org/download.php#binaries]. _A note for Mac users_: After having installed wxPython, add the path to the newly installed wx-config to your path. Something like this:
-
-   `export PATH=/usr/local/lib/wxPython-unicode/bin:$PATH`
-
-Next, install the required libraries from the Enthought Tool Suite (ETS):
-{{{
-  easy_install Traits
-  easy_install TraitsGUI
-  easy_install TraitsTraitsBackendWX
-  easy_install Enable
-  easy_install Chaco
-  easy_install EnthoughtBase
-}}}
-Note that you may run into incompatibility issues with the latest ETS package versions. In case you do, these versions should work:
-
-  Traits 3.1.0 
-
-  TraitsGUI 3.0.4
-
-  TraitsBackendWX 3.1.0 
-
-  Enable 3.0.2
-
-  Chaco 3.0.1
-
-  EnthoughtBase 3.0.2
-
-You can install a specific version of a package with easy_install by downloading the version egg, and then installing that egg. For instance, remove the latest Traits installation, and install from egg:
- 
-  `easy_install -m Traits`
-
-  `easy_install Traits-3.1.0-py2.5-win32.egg`
-
-=== dateutil ===
+Yasso07 user interface is written in [http://www.python.org Python] using the [http://code.enthought.com/projects/index.php Enthought Tool Suite] (ETS). It's very tedious to set up, so you're well advised on using the [http://www.enthought.com/products/getepd.php Enthought Python Distribution] that contains a ready Python environment for ETS. For academia, it's free, others have to fork out some cash...
 
 Besides ETS, you need to install the dateutil package:
 
@@ -109,10 +26,23 @@ Besides ETS, you need to install the dateutil package:
 
 Grab the source distribution of Yasso07 (see the downloads tab), unzip it, open your console/terminal in the resulting yasso07-folder and issue the command
 
-   `python yasso.py` 
+   `python yasso.py` (on Windows)
 
-or if you are using [http://pypi.python.org/pypi/virtualenv virtualenv] with OS X, you should use:
+   `pythonw yasso.py`(on Mac)
 
-   `pythonw yasso.py`
 
-but in order to get that to work, see [http://github.com/gldnspud/virtualenv-pythonw-osx/tree/master this] link.
+===EPD & virtualenv===
+
+If you already have a Python installation that you're using, you can hide the EPD installation in a [http://pypi.python.org/pypi/virtualenv virtualenv], see also [http://www.doughellmann.com/projects/virtualenvwrapper/ virtualenwrapper] which makes virtualenv a lot nicer to use.
+
+To do that 
+  * install EPD
+  * comment out the path modifications make during the installation (see .bash_profile on OS X)
+  * create a new virtualenv specifying the EPD python interpreter as the one to use, e.g. using virtualenvwrapper
+
+  `mkvirtualenv -p /Library/Frameworks/Python.framework/Versions/6.2/bin/python yasso`
+
+  will create a new virtualenv called 'yasso' that will use the EPD python
+  * make a symbolic link to pythonw in the virtualenv's bin directory, e.g.:
+
+  `ln -s /Library/Frameworks/Python.framework/Versions/6.2/bin/pythonw2.6 pythonw`
