@@ -28,6 +28,21 @@ You'll get the interactive Python shell if you have Python installed. At the beg
 
 If you need to install Python, head over to [http://www.python.org/download/ Python download] page for a suitable distribution.
 
+_Note for Mac users_
+
+If you're using Snow Leopard (OS X 10.6), the Python interpreter that ships with the system runs in 64 bit mode. Yasso07ui uses the wxPython user interface library that must be run using 32 bit Python. To set your system Python run in 32 bit mode, open terminal and type:
+
+   `defaults write com.apple.versioner.python Prefer-32-Bit -bool yes`
+
+To get the additional Python package installations to succeed,  you'll have to set these environment variables in order to get the required 32 bit support:
+{{{
+  export MACOSX_DEPLOYMENT_TARGET=10.6
+  export CFLAGS="-arch i386 -arch x86_64"
+  export FFLAGS="-m32 -m64"
+  export LDFLAGS="-Wall -undefined dynamic_lookup -bundle -arch i386 -arch x86_64"
+}}}
+These setting will survive through your current Terminal session.
+
 === Enthought Tool Suite ===
 
 First, download [http://peak.telecommunity.com/dist/ez_setup.py this] python script and in the folder you downloaded is run:
@@ -35,43 +50,55 @@ First, download [http://peak.telecommunity.com/dist/ez_setup.py this] python scr
    `sudo python ez_setup.py`
 or 
    `python ez_setup.py`
+
 if you're on Windows.
 
-The next step is to easy_install Sphinx (required by Chaco below):
+The next step is to install dependencies required by the [https://svn.enthought.com/enthought/wiki/Install Enthought Tool Suite]:
 
   `easy_install Sphinx`
 
-Then, follow these [https://svn.enthought.com/enthought/wiki/Install instructions] to install the Enthought Tool Suite.
 
-You don't have to install everything, the parts you'll need are: `Traits, TraitsGUI, TraitsBackendWX, Enable, Chaco, EnthoughtBase`.
+  `easy_install Numpy`
 
-That means, that besides Python and Setuptools, you need these installed for the ETS: `MinGW` (assuming you're using Windows), `Numpy`, `Swig` and `wxPython`
+   Install MinGW (if you're on Windows)
 
+   Install an [http://www.cosc.canterbury.ac.nz/greg.ewing/python/Pyrex/oldtar/Pyrex-0.9.8.2.tar.gz 0.9.8.2] release of Pyrex (current as of writing, 0.9.9, will result in errors when installing Enable below) 
+
+   Install SWIG from [http://www.swig.org/download.html http://www.swig.org/download.html]
+
+   Install wxPython from [http://www.wxpython.org/download.php#binaries http://www.wxpython.org/download.php#binaries]. _A note for Mac users_: After having installed wxPython, add the path to the newly installed wx-config to your path. Something like this:
+
+   `export PATH=/usr/local/lib/wxPython-unicode/bin:$PATH`
+
+Next, install the required libraries from the Enthought Tool Suite (ETS):
+{{{
+  easy_install Traits
+  easy_install TraitsGUI
+  easy_install TraitsTraitsBackendWX
+  easy_install Enable
+  easy_install Chaco
+  easy_install EnthoughtBase
+}}}
 Note that you may run into incompatibility issues with the latest ETS package versions. In case you do, these versions should work:
 
-Traits 3.1.0
+  Traits 3.1.0 
 
-TraitsGUI 3.0.4
+  TraitsGUI 3.0.4
 
-TraitsBackendWX 3.1.0
+  TraitsBackendWX 3.1.0 
 
-Enable 3.0.2
+  Enable 3.0.2
 
-Chaco 3.0.1
+  Chaco 3.0.1
 
-EnthoughtBase 3.0.2
+  EnthoughtBase 3.0.2
 
 You can install a specific version of a package with easy_install by downloading the version egg, and then installing that egg. For instance, remove the latest Traits installation, and install from egg:
  
- `easy_install -m Traits`
+  `easy_install -m Traits`
 
- `easy_install Traits-3.1.0-py2.5-win32.egg`
+  `easy_install Traits-3.1.0-py2.5-win32.egg`
 
-A note for Mac users: After having installed wxPython, add the path to the newly installed wx-config to your path before trying to easy_install Enable. Something like this:
-
-   `export PATH=/usr/local/lib/wxPython-unicode-2.8.9.2/bin:$PATH`
-   `sudo easy_install Enable[nonets]`
- 
 === dateutil ===
 
 Besides ETS, you need to install the dateutil package:
