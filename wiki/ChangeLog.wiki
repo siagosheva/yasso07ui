@@ -2,6 +2,14 @@
 
 === Change log for Yasso07 releases ===
 
+*1.0.4*
+
+Bug fix release, 14.9.2010
+
+- Fixed: zero input for a timestep caused the model run to freeze
+
+(1.0.3 skipped as there was a wrongly named OS X source release download available)
+
 *1.0.2*
 
 Bug fix release, 4.6.2009
