@@ -2,6 +2,10 @@
 
 === Change log for Yasso07 releases ===
 
+2011-08-18
+
+Changed license to LGPL
+
 *1.0.4*
 
 Bug fix release, 14.9.2010
